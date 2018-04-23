@@ -5,7 +5,7 @@
 
 /*----------------------------------------------------------------------------------------------------*\
 |*                                   - Moving Forward with 4 Motors -                                 *|
-|*                                      
+|*
 |*    MOTORS & SENSORS:                                                                               *|
 |*    [I/O Port]          [Name]                [Type]                [Description]                   *|
 |*    Motor Port 2        frontRightMotor       VEX 3-wire module     Right side motor                *|
@@ -14,16 +14,23 @@
 |*    Motor Port 5        backLeftMotor         VEX 3-wire module     Left side motor                 *|
 \*----------------------------------------------------------------------------------------------------*/
 
-
 //+++++++++++++++++++++++++++++++++++++++++++++| MAIN |+++++++++++++++++++++++++++++++++++++++++++++++
 task main()
-{	  	
-	while (1 == 1)
-	{	
+{
+	while (true)
+	{
 		motor[frontRightMotor] = (vexRT[Ch2] + vexRT[Ch1])/2;
 		motor[backRightMotor] = (vexRT[Ch2] + vexRT[Ch1])/2;
 		motor[frontLeftMotor] = (vexRT[Ch2] - vexRT[Ch1])/2;
 		motor[backLeftMotor] = (vexRT[Ch2] - vexRT[Ch1])/2;
+
+		if(vexRT[Btn6U] == 1)
+		{
+
+		} else if(vexRT[Btn6D] == 1)
+ 		{
+
+ 		}
 	}
-}			
+}
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
