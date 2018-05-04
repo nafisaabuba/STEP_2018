@@ -1,0 +1,34 @@
+#pragma config(sensor, in2,      potentiometer  sensorpotenicmeter)
+#pragma config(sensor, in3       light          sensoranoAnolog)
+#pragma config(sensor, digtis15  limitswitch,   sensorNone)
+#pragma config(sensor, digis16   button,        sensorDigitalIn)
+#pragma config(Motor,  port1,             leftmotor,    tmotorvex393_MBrige,   opeanloop)
+#pragma config(Motor,  port10,            rightmotor,   tmotorVex393_HBrige,   opeanloop)
+
+
+task main()
+{
+
+while(1==1)(
+
+if(sensorValue(pototenticmeter)  >=510)
+{
+
+motor{leftmotor)  = 127;
+motor(rightmotor) = 127;
+}
+else
+{
+  motor[leftmotor]  = 0;
+motor[rightmotor]  = 0;
+}
+
+}
+
+
+
+
+
+
+
+}
